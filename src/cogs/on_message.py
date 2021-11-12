@@ -16,8 +16,10 @@ class MessageListener(commands.Cog):
 
 	@commands.Cog.listener()
 	async def on_message(self, message):
-
-		if "hydrated" in message.content or "hydro" in message.content: #a secret for my friends :)
+		
+	message_but_lowercase = message.content.lower();
+	
+		if "hydrated" in message_but_lowercase or "hydro" in message_but_lowercase: #a secret for my friends :)
 			#emote = self.bot.get_emoji("droplet")
 			await message.add_reaction('\N{cup with straw}')
 
